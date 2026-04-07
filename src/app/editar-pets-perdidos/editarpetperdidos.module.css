@@ -1,0 +1,313 @@
+/* CONTAINER GERAL */
+.cadastroPetContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: var(--bg-soft);
+  padding: 50px 20px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background de patinhas */
+.cadastroPetContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: none;
+  background-repeat: repeat;
+  background-size: 600px;
+  opacity: 0.50;
+  z-index: 0;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(97%) saturate(686%) hue-rotate(319deg) brightness(101%) contrast(101%);
+}
+
+/* CARD CENTRAL COM 2 CONTAINERS */
+.cadastroWrapper {
+  width: 100%;
+  max-width: 1750px;
+  background:var(--heading);
+  border-radius: 10px;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* Visual grouping: left (upload+descriÃ§Ã£o) and right (form) cards */
+.colEsquerda,
+.colDireita {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(8, 35, 63, 0.06);
+}
+
+.colEsquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.colDireita {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* COLUNA ESQUERDA */
+.colEsquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* UPLOAD */
+.uploadImagem {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.uploadBox {
+  width: 180px;
+  height: 180px;
+  background-color: var(--card);
+  border-radius: 24px;
+  border: 3px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.uploadBox:hover {
+  background-color: var(--card);
+}
+
+.uploadIcon {
+  font-size: 40px;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.uploadText {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.uploadPreview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.iconeAddImg {
+  width: 60%;
+  margin-bottom: 0px;
+}
+
+/* DESCRIÃ‡ÃƒO BOX */
+.descricaoBox {
+  border-radius: 20px;
+  border: 6px solid var(--heading);
+  padding: 15px;
+}
+.descLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+.descIcon {
+  width: 24px;
+  opacity: 0.8;
+}
+.descricaoTextarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  min-height: 130px;
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+/* COLUNA DIREITA */
+.colDireita {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.tituloArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.tituloCadastro {
+  font-size: 33px;
+  color: var(--heading);
+}
+.iconHome {
+  width: 40px;
+}
+
+/* FORM CAMPOS */
+.campo {
+  position: relative;
+  margin-bottom: 8px; /* fallback spacing between fields */
+}
+.iconeInput {
+  width: 24px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.campo input {
+  width: 100%;
+  height: 48px;
+  padding-left: 50px;
+  border-radius: 30px;
+  border: 2px solid var(--heading);
+  outline: none;
+  font-size: 16px;
+  gap: 20px;
+}
+
+/* RECOMPENSA */
+.recompensaBox {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.recompensaField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.recompensaLabel {
+  font-weight: 700;
+  color: var(--heading);
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+.recompensaControl, .recompensaRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+.iconeRecompensa {
+  width: 30px;
+}
+.slider {
+  width: 100%;
+  accent-color: red;
+}
+.recompensaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.recompensaLabelWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.formCadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.valorRecompensa {
+  font-weight: bold;
+  color: red;
+}
+
+/* BOTÃƒO */
+.btnCadastrar {
+  margin-top: 10px;
+  height: 48px;
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: var(--nav);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.formCadastro .btnCadastrar {
+  width: 100%;
+  margin: 16px auto 0 auto;
+  display: block;
+}
+
+/* ACTIONS ROW */
+.actionsRow {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.btnEditar, .btnExcluir {
+  flex: 1 1 48%;
+  height: 46px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+.btnEditar {
+  background: #28a745; /* green */
+  color: #fff;
+}
+.btnExcluir {
+  background: #dc3545; /* red */
+  color: #fff;
+}
+
+/* GENDER BUTTONS */
+.genderRow {
+  display: flex;
+  gap: 8px;
+}
+.genderBtn {
+  flex: 1;
+  height: 44px;
+  border-radius: 22px;
+  border: 2px solid var(--heading);
+  background: white;
+  color: var(--heading);
+  font-weight: 700;
+  cursor: pointer;
+}
+.genderBtnActive {
+  background: var(--heading);
+  color: white;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .cadastroWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+

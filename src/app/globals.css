@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --nav: #0a6f74;
+  --nav-hover: #0c8086;
+  --bg: #cdd8da;
+  --bg-soft: #dbe3e4;
+  --card: #eef3f3;
+  --muted: #4a6166;
+  --text: #2f3f43;
+  --heading: #0f6f78;
+  --border: #59a3a9;
+  --accent-orange: #f47d2f;
+  --accent-yellow: #f0b907;
+  --danger: #c93a3a;
+  --background: #ffffff;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global body settings */
+body {
+  flex-grow: 1;
+  position: relative;
+  min-height: 100vh;
+  overflow: auto;
+  color: var(--text);
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+
+/* If body has this class, hide the global background (used by home page) */
+body.no-site-bg .site-bg,
+body.no-site-bg {
+  background-image: none !important;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+body.scrolling::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.scrolling {
+  scrollbar-width: thin;
+}
+
+/* remove previous solid overlay pseudo-element and keep layering safe */
+/* If an overlay color is desired, you can uncomment and adjust the block below. */
+/*
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(39, 75, 101, 0.18);
+  z-index: -1;
+  pointer-events: none;
+}
+*/
+
+/* Paw parallax elements */
+.paw {
+  position: fixed;
+  z-index: 0; /* garantindo que, se existirem, fiquem acima do background */
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.paw img {
+  width: 50px;
+  height: 50px;
+}
+
+.paw1 {
+  top: 10%;
+  left: 10%;
+}
+
+.paw2 {
+  top: 20%;
+  right: 15%;
+}
+
+.paw3 {
+  top: 40%;
+  left: 20%;
+}
+
+.paw4 {
+  top: 60%;
+  right: 10%;
+}
+
+.paw5 {
+  top: 80%;
+  left: 15%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* footer styles */
+
+.footer {
+  background-color: var(--nav);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer-logo p {
+  color: #deecee;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffd08f;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #deecee;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* Icones das redes sociais */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-icons a {
+  color: #fff;
+  font-size: 1.6rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #ffd08f;
+  transform: scale(1.15);
+}
+

@@ -1,0 +1,358 @@
+/* ===== DASHBOARD ===== */
+.container {
+  min-height: 92vh;
+  background: var(--bg);
+  padding: 3rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 0;
+}
+
+.pageInner {
+  width: 100%;
+  max-width: 860px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.headerText h1 {
+  color: var(--heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+  letter-spacing: -0.5px;
+}
+
+.headerText p {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.headerText strong {
+  color: var(--heading);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(15, 111, 120, 0.35), transparent);
+  margin-bottom: 2rem;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--heading);
+  margin: 0 0 1rem;
+}
+
+/* Stat cards */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  backdrop-filter: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.statCard:hover {
+  background: #f7fbfb;
+  border-color: var(--heading);
+}
+
+.statCardAdocao {
+  border-top: 4px solid var(--heading);
+}
+
+.statCardPerdidos {
+  border-top: 4px solid var(--accent-orange);
+}
+
+.statIconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(89, 163, 169, 0.22);
+  color: var(--heading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statIconLost {
+  background: rgba(244, 125, 47, 0.2);
+  color: #cf6d2f;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--heading);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.statLabel {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Action buttons grid */
+.actionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.btnAction {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.5rem;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  white-space: nowrap;
+}
+
+.btnAction:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0.93;
+}
+
+.btnPrimary {
+  background: var(--nav);
+  color: #fff;
+  border: 4px solid #5fa8ae;
+}
+
+.btnSecondary {
+  background: #f4f8f8;
+  color: var(--heading);
+  border: 2px solid var(--border);
+}
+
+.btnSecondary:hover {
+  background: #edf3f3;
+}
+
+/* Tabela de gerenciamento */
+.tableContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tableContainer h1 {
+  color: var(--heading);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btnNovo {
+  padding: 10px 24px;
+  background: var(--nav);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnNovo:hover {
+  opacity: 0.9;
+}
+
+.btnVoltar {
+  padding: 10px 24px;
+  background: #5f777b;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btnVoltar:hover {
+  background: #4f6569;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(13, 56, 60, 0.12);
+}
+
+.table th {
+  background: var(--nav);
+  color: #fff;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #d6e1e2;
+  font-size: 0.9rem;
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: #edf4f4;
+}
+
+.table img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btnEditar {
+  padding: 6px 14px;
+  background: var(--nav);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btnEditar:hover {
+  background: var(--nav-hover);
+}
+
+.btnExcluir {
+  padding: 6px 14px;
+  background: #d35353;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btnExcluir:hover {
+  background: #bc4343;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 3rem 1rem;
+  font-size: 1.1rem;
+}
+
+.loading {
+  text-align: center;
+  color: var(--muted);
+  padding: 3rem;
+  font-size: 1.1rem;
+}
+
+/* Status badges */
+.statusBadge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.statusAvailable {
+  background: #deefe0;
+  color: #23663a;
+}
+
+.statusAdopted {
+  background: #e2f0f1;
+  color: #1d5f66;
+}
+
+.statusLost {
+  background: #fdecd7;
+  color: #985321;
+}
+
+@media (max-width: 640px) {
+  .statsRow,
+  .actionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .headerText h1 {
+    font-size: 1.5rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
